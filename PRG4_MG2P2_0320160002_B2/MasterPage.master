@@ -1,0 +1,36 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder id="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <link rel="stylesheet" type="text/css" href="css/0320160002.css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <h1 style="text-align:center; background-color:teal; padding: 20px; margin-top: 0px; margin-bottom: 1px;">Website Percobaan</h1>
+    </div>
+    <div class="leftPage" style="min-height:100%; background-color:azure; ">
+        <asp:TreeView ID="TreeView1" runat="server" Width="150px">
+            <Nodes>
+                <asp:TreeNode Text="About me" value="aboutme" NavigateUrl="~/0320160002_aboutme.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Links" Value="links" NavigateUrl="~/0320160002_links.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Guestbook" Value="guestbook" NavigateUrl="~/0320160002_guestbook.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="View Guestbook" Value="viewguestbook" NavigateUrl="~/0320160002_viewguestbook.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Konversi Temperatur" Value="konversitemp" NavigateUrl="~/0320160002KonversiTemperatur.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Konversi Kurs" Value="konversikurs" NavigateUrl="~/0320160002_KursConverter.aspx"></asp:TreeNode>
+            </Nodes>
+        </asp:TreeView>
+    </div>
+    <div class="centerPage">
+        <asp:ContentPlaceHolder id="MainPage" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
